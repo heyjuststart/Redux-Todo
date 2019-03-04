@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './reducers';
 import './index.css';
-import App from './App';
+import TodosContainer from './containers/TodosContainer';
 
 const store = createStore(
   reducer,
@@ -13,7 +13,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <TodosContainer />
   </Provider>,
   document.getElementById('root')
 );
