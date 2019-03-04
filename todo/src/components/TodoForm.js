@@ -8,6 +8,7 @@ const TodoForm = ({ onAddTodo }) => {
       onSubmit={e => {
         e.preventDefault();
         onAddTodo(text);
+        setText('');
       }}
     >
       <input type="text" value={text} onChange={e => setText(e.target.value)} />

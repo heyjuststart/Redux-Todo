@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addTodo } from '../actions';
+import { addTodo, toggleFinish } from '../actions';
 
 import App from '../App';
 
@@ -8,8 +8,11 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addTodo: todo => {
-    dispatch(addTodo(todo));
+  addTodo: text => {
+    dispatch(addTodo(text));
+  },
+  toggleFinish: id => {
+    dispatch(toggleFinish(id))
   }
 });
 
